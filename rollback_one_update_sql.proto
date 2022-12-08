@@ -6,13 +6,14 @@ option java_package = "org.liquibase.grpc.proto";
 option java_multiple_files = true;
 option java_outer_classname = "RollbackOneUpdateSqlProto";
 
-package liquibase;
+package liquibase.pro;
 
 service RollbackOneUpdateSqlService {
   rpc execute(RollbackOneUpdateSqlRequest) returns (Response) {}
 }
 
-/* Rollback one update from the database */
+/* [PRO]
+Rollback one update from the database */
 message RollbackOneUpdateSqlRequest {
   string changelog_file = 1; // *required* The root changelog
   optional string default_catalog_name = 2; // The default catalog name to use for the database connection
