@@ -9,15 +9,30 @@ steps:
 - uses: actions/checkout@v3
 - uses: liquibase-github-actions/rollback-one-update-sql@v4.23.0
   with:
-    # The root changelog
+    # The root changelog file
     # string
     # Required
     changelogFile: ""
 
-    # The JDBC target database connection URL
+    # The JDBC database connection URL
     # string
     # Required
     url: ""
+
+    # Fully-qualified class which specifies a ChangeExecListener
+    # string
+    # Optional
+    changeExecListenerClass: ""
+
+    # Path to a properties file for the ChangeExecListenerClass
+    # string
+    # Optional
+    changeExecListenerPropertiesFile: ""
+
+    # Context string to use for filtering
+    # string
+    # Optional
+    contexts: ""
 
     # The default catalog name to use for the database connection
     # string
@@ -44,10 +59,10 @@ steps:
     # Optional
     driverPropertiesFile: ""
 
-    # Flag which indicates you intend to use this feature
-    # bool
+    # Label expression to use for filtering
+    # string
     # Optional
-    force: ""
+    labelFilter: ""
 
     # Control whether names of objects in the default catalog are fully qualified or not. If true they are. If false, only objects outside the default catalog are fully qualified
     # bool
@@ -59,7 +74,7 @@ steps:
     # Optional
     outputDefaultSchema: ""
 
-    # The target database password
+    # Password to use to connect to the database
     # string
     # Optional
     password: ""
@@ -69,7 +84,7 @@ steps:
     # Optional
     rollbackScript: ""
 
-    # The target database username
+    # Username to use to connect to the database
     # string
     # Optional
     username: ""
