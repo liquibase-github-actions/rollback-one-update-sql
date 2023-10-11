@@ -7,7 +7,7 @@ Rollback one update from the database
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/rollback-one-update-sql@v4.23.2
+- uses: liquibase-github-actions/rollback-one-update-sql@v4.24.0
   with:
     # The root changelog file
     # string
@@ -101,7 +101,7 @@ The liquibase rollback one update sql action accepts all valid liquibase global 
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/rollback-one-update-sql@v4.23.2
+  - uses: liquibase-github-actions/rollback-one-update-sql@v4.24.0
     with:
       changelogFile: ""
       url: ""
