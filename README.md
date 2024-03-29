@@ -1,8 +1,7 @@
 # Liquibase Rollback One Update Sql Action
 Official GitHub Action to run Liquibase Rollback One Update Sql in your GitHub Action Workflow. For more information on how rollback one update sql works visit the [Official Liquibase Documentation](https://docs.liquibase.com/commands/home.html).
 ## Rollback One Update Sql
-[PRO]
-Rollback one update from the database
+[PRO] Rollback one update from the database
 ## Usage
 ```yaml
 steps:
